@@ -1,0 +1,20 @@
+{
+  "name": "Blog",
+  "version": "1.0.0",
+  "description": "Personal blogging site to maintain my learning logs as well as reference to my work.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anuragsinghbisht/Blog.git"
+  },
+  "keywords": [],
+  "author": "Anurag Singh Bisht <anuragsinghbisht@outlook.com> (https://github.com/anuragsinghbisht)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anuragsinghbisht/Blog/issues"
+  },
+  "homepage": "https://github.com/anuragsinghbisht/Blog#readme"
+}
