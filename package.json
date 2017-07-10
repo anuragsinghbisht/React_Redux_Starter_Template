@@ -4,7 +4,10 @@
   "description": "Personal blogging site to maintain my learning logs as well as reference to my work.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "remove": "rm -rf ./dist",
+    "build:dev": "npm run remove && webpack --env=dev --progress --profile --colors",
+    "build:dist": "npm run remove && webpack --env=prod --progress --profile --colors",
+    "start": "webpack-dev-server --env=dev"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,31 @@
   "bugs": {
     "url": "https://github.com/anuragsinghbisht/Blog/issues"
   },
-  "homepage": "https://github.com/anuragsinghbisht/Blog#readme"
+  "homepage": "https://github.com/anuragsinghbisht/Blog#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "bootstrap": "^4.0.0-alpha.6",
+    "css-loader": "^0.28.4",
+    "eslint": "^4.2.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-react": "^7.1.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "font-awesome": "^4.7.0",
+    "html-webpack-plugin": "^2.29.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.1.0"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
 }
