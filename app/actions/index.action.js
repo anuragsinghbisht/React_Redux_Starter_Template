@@ -1,5 +1,5 @@
 import actions from "./actionTypes";
-import { createAction } from "./actions.helper";
+import { createAction } from "../helper/actions.helper";
 
 export const action = () => {
   return dispatch => {

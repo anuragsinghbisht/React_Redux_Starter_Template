@@ -7,6 +7,9 @@
     "remove": "rm -rf ./dist",
     "build:dev": "npm run remove && webpack --env=dev --progress --profile --colors",
     "build:dist": "npm run remove && webpack --env=prod --progress --profile --colors",
+    "coverage": "jest --coverage --config=jest.config.json",
+    "test": "jest",
+    "test:watch": "npm run coverage -- --watch",
     "start": "webpack-dev-server --env=dev"
   },
   "repository": {
@@ -28,6 +31,7 @@
     "babel-preset-env": "^1.6.0",
     "bootstrap": "^4.0.0-alpha.6",
     "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
     "eslint": "^4.2.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-babel": "^4.1.1",
@@ -37,7 +41,9 @@
     "file-loader": "^0.11.2",
     "font-awesome": "^4.7.0",
     "html-webpack-plugin": "^2.29.0",
+    "jest": "^20.0.4",
     "node-sass": "^4.5.3",
+    "react-test-renderer": "^15.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.1.0"
