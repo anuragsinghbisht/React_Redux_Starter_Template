@@ -12,7 +12,7 @@ describe("action", () => {
     expect(store.getActions()).toEqual([
       {
         type: actionTypes.ACTION,
-        payload: "hello"
+        payload: "Getting started with react"
       }
     ]);
   });
