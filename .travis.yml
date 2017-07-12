@@ -1,15 +1,22 @@
 language: node_js
 cache:
   directories:
-    - node_modules
+  - node_modules
 branches:
   only:
-    - master
+  - master
 notifications:
   email: false
 node_js:
-  - '6'
+- '6'
 before_script:
-  - npm install
+- npm install
 script:
-  - npm run test
+- npm run test
+deploy:
+  provider: heroku
+  api_key:
+    secure: QPgzBWZ/NUxAHY5vPMg3ALI9zbLTIeM31osyIkb9w7c3+LbyXdhaZD/XzCtTxgXv1Ibi7OH7LchLWOELwA1xjgUll1A5afDJ69h8EIgcO3L9nkMFSiyh4es8PeOHYwGv+E9bPeUKyrwZDXZlQuEyDy5EZV1joIbuSadldNIU1w8gSyq8yJpPM1cpwJNCWNAd4FhZ+6yk5uSscp9arxREqTPWub0v8Xp3WEIaeiaAtpCL9LpRkeMW1j8Ugry5RW3i7fQ802NHFy/gdEOaMwOZPuG0J0GS9E9Sdtxcw08srkkZLK0XGPnQnnrux0hYLzMN5sFfAUlS2e4wHRleA7yQJXuUbRoaQBwS6zj5kdqsnvh4+gcUpZfkPZ7ryzMLzs2YW+289m7E9E2uuv8wRm1S4w3Sb/NorDtUHcxHxEm/vZRCthjdRsT6S/USg4mJAoz643su3HmNkQVpv3W28htu7My0aUUucPf7F3OgNOjMREN0iVOx7lTaX6lgvn+K0xRrW00Iu3exM4859Mc8UyzVeox8syIZUrG3/NCCD/i6DfkyMFlOky9BWYjsM+MvtQVjP4Q1aUBCoCOypNFlqOfwq4/HO/zm2pW98WNT2zJMjBqdcHXIbRpqXwzaZStuOsN2odUdHluSWrwKjI1/gI4j/0+5mvylkziosJgPAzqVcYI=
+  app: anurag-blog
+  on:
+    repo: anuragsinghbisht/Blog
