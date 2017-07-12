@@ -4,6 +4,8 @@
   "description": "Personal blogging site to maintain my learning logs as well as reference to my work.",
   "main": "index.js",
   "scripts": {
+    "commit": "git-cz",
+    "init": "./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact",
     "remove": "rm -rf ./dist",
     "build:dev": "npm run remove && webpack --env=dev --progress --profile --colors",
     "build:dist": "npm run remove && webpack --env=prod --progress --profile --colors",
@@ -35,6 +37,7 @@
     "bootstrap": "^4.0.0-alpha.6",
     "commitizen": "^2.9.6",
     "css-loader": "^0.28.4",
+    "cz-conventional-changelog": "^2.0.0",
     "enzyme": "^2.9.1",
     "eslint": "^4.2.0",
     "eslint-loader": "^1.9.0",
@@ -48,6 +51,7 @@
     "jest": "^20.0.4",
     "node-sass": "^4.5.3",
     "react-test-renderer": "^15.6.1",
+    "redux-mock-store": "^1.2.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.1.0"
@@ -61,5 +65,10 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.7.1",
     "redux-thunk": "^2.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
