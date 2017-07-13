@@ -5,9 +5,12 @@ describe("actionReducer", () => {
   it("must return initial state", () => {
     expect(actionReducer(undefined, {})).toBe("");
   });
-  it("must return paytion for action type `ACTION`", () => {
+  it("must return paytion for action type `ACTION_FULFILLED`", () => {
     expect(
-      actionReducer(undefined, { type: actionTypes.ACTION, payload: "hello" })
+      actionReducer(undefined, {
+        type: actionTypes.ACTION + "_FULFILLED",
+        payload: { data: { message: "hello" } }
+      })
     ).toBe("hello");
   });
 });

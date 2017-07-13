@@ -6,7 +6,9 @@ import "./stylesheets/style.scss";
 
 const mapStateToProps = state => {
   return {
-    message: state.message
+    message: state.message,
+    loading: state.loading,
+    error: state.error
   };
 };
 
@@ -14,7 +16,23 @@ class Main extends Component {
   componentDidMount() {
     this.props.action();
   }
+  renderLoading() {
+    return <p>loading</p>;
+  }
+  renderError() {
+    return (
+      <p>
+        {this.props.error.appError}
+      </p>
+    );
+  }
   render() {
+    if (this.props.loading.appLoading) {
+      return this.renderLoading();
+    }
+    if (this.props.error.appError) {
+      return this.renderError();
+    }
     return (
       <h1>
         {this.props.message}
@@ -25,7 +43,9 @@ class Main extends Component {
 
 Main.propTypes = {
   action: PropTypes.func.isRequired,
-  message: PropTypes.string.isRequired
+  message: PropTypes.string.isRequired,
+  loading: PropTypes.object,
+  error: PropTypes.object
 };
 
 export default connect(mapStateToProps, actions)(Main);
