@@ -1,0 +1,83 @@
+{
+  "name": "Blog",
+  "version": "1.0.0",
+  "description": "Personal blogging site to maintain my learning logs as well as reference to my work.",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "init": "./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact",
+    "remove": "rm -rf ./dist",
+    "build:dev": "npm run remove && webpack --env=dev --progress --profile --colors",
+    "build:dist": "npm run remove && webpack --env=prod --progress --profile --colors",
+    "coverage": "jest --coverage --config=jest.config.json",
+    "test": "jest",
+    "lint": "eslint .",
+    "test:watch": "npm run coverage -- --watch",
+    "start:dev": "npm run lint && npm run test && npm run build:dev && node index.js",
+    "start": "npm run build:dist && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anuragsinghbisht/Blog.git"
+  },
+  "keywords": [],
+  "author": "Anurag Singh Bisht <anuragsinghbisht@outlook.com> (https://github.com/anuragsinghbisht)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anuragsinghbisht/Blog/issues"
+  },
+  "homepage": "https://github.com/anuragsinghbisht/Blog#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "bootstrap": "^4.0.0-alpha.6",
+    "commitizen": "^2.9.6",
+    "css-loader": "^0.28.4",
+    "cz-conventional-changelog": "^2.0.0",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.2.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-react": "^7.1.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "font-awesome": "^4.7.0",
+    "html-webpack-plugin": "^2.29.0",
+    "jest": "^20.0.4",
+    "nock": "^9.0.13",
+    "node-sass": "^4.5.3",
+    "react-test-renderer": "^15.6.1",
+    "redux-mock-store": "^1.2.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1",
+    "morgan": "^1.8.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.7.1",
+    "redux-promise-middleware": "^4.3.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

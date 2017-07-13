@@ -1,0 +1,22 @@
+language: node_js
+cache:
+  directories:
+  - node_modules
+branches:
+  only:
+  - master
+notifications:
+  email: false
+node_js:
+- '6'
+before_script:
+- npm install
+script:
+- npm run test
+# deploy:
+#   provider: heroku
+#   api_key:
+#     secure: <api_key>
+#   app: <heroku_app_name>
+#   on:
+#     repo: <github_repo>
