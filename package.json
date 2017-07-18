@@ -18,15 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anuragsinghbisht/Blog.git"
+    "url": "git+https://github.com/anuragsinghbisht/React_Redux_Starter_Template.git"
   },
   "keywords": [],
   "author": "Anurag Singh Bisht <anuragsinghbisht@outlook.com> (https://github.com/anuragsinghbisht)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anuragsinghbisht/Blog/issues"
+    "url": "https://github.com/anuragsinghbisht/React_Redux_Starter_Template/issues"
   },
-  "homepage": "https://github.com/anuragsinghbisht/Blog#readme",
+  "homepage": "https://github.com/anuragsinghbisht/React_Redux_Starter_Template#readme",
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
